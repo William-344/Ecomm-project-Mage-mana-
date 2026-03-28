@@ -1,0 +1,142 @@
+}
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EDE6F7; /* light purple background */
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4B0082; /* dark purple */
+    color: white;
+    padding: 0.5rem 2rem;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-buttons a {
+    margin-right: 1rem;
+    color: #EDE6F7; /* light purple for links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-buttons a:hover {
+    color: #FFD700; /* gold on hover */
+}
+
+.nav-buttons a:last-child {
+    margin-right: 0;
+}
+
+.logo h1 {
+    font-size: 1.2rem;
+    color: #FFD700; /* gold logo text */
+}
+
+/* Hero Banner */
+.hero-banner {
+    background: url('images/medieval-banner.jpg') center/cover no-repeat;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner button {
+    background-color: #FFD700; /* yellowish gold */
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.hero-banner button:hover {
+    transform: scale(1.05);
+}
+
+/* Featured Panels */
+.featured-panels {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem;
+    gap: 1rem;
+}
+
+.panel {
+    background-color: #D3BFFF; /* light purple panel background */
+    border: 3px solid #FFD700; /* yellowish gold border */
+    border-radius: 8px;
+    width: 22%;
+    text-align: center;
+    padding: 2rem 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.panel:hover {
+    transform: scale(1.05);
+    background-color: #B19CD9; /* medium purple on hover */
+}
+
+/* Featured Event */
+.featured-event {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F3E6FF; /* very light purple */
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.event-banner h3 {
+    font-size: 1.5rem;
+    color: #4B0082; /* dark purple text */
+}
+
+.event-time {
+    background-color: #FFD700; /* gold rectangle */
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4B0082; /* dark purple */
+    color: #EDE6F7; /* light purple text */
+    padding: 2rem;
+    border-top: 4px solid #FFD700; /* gold border */
+}
+
+footer h4 {
+    color: #FFD700; /* gold headings */
+}
+
+.footer-section p, .hours div {
+    font-size: 0.9rem;
+    color: #EDE6F7; /* light purple text */
+}
+
+.hours {
+    display: flex;
+    justify-content: space-between;
+}
