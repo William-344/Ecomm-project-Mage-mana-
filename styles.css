@@ -28,13 +28,18 @@ header {
   color: #d3af37;
 }
 
+.nav-buttons {
+    margin-left: auto; 
+    display: flex;     
+    gap: 1.5rem;      
+}
+
 .nav-buttons a {
-    margin-right: 1rem;
     color: #D9BFFF;
     text-decoration: none;
-    margin-left: 1.5rem;
     font-weight: bold;
 }
+
 
 .nav-buttons a:hover {
     color: #d3af37; /* gold on hover */
