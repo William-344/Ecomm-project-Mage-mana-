@@ -109,7 +109,8 @@ header {
 }
 .panel {
   border: 2px solid #d3af37;
-  width: 23%; /* 4 panels side by side */
+  flex: 1 1 250px; /* allows panels to grow */
+  max-width: 300px; /* keeps them from getting too huge */
   text-align: center;
   padding: 1rem;
   border-radius: 8px;
