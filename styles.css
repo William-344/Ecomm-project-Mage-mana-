@@ -123,6 +123,7 @@ header {
 }
 
 .panel h3 {
+  color: #ffffff; /* force white */
   padding: 0.75rem;
   text-align: center;
 }
