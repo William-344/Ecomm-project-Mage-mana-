@@ -115,6 +115,11 @@ header {
   overflow: hidden; /* keeps image inside rounded corners */
   background-color: #2f1b47;
   max-width: 260px;
+  text-decoration: none;
+  color: inherit;
+}
+.panel:visited {
+  color: inherit;
 }
 .panel img {
   width: 100%;
