@@ -80,7 +80,7 @@ header {
 
 /* Hero Banner */
 .hero-banner {
-  background: url(nothereyet) center/cover no-repeat;
+  background: url(images/Hero\ banner\ main\ page.png) center/cover no-repeat;
   height: 400px;
   display: flex;
   justify-content: center; /* centers button horizontally */
