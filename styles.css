@@ -7,9 +7,12 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: rgb(74, 47, 112); /* dark purple background */
     color: #fdebeb;
+}
+h1, h2, h3, .main-title {
+    font-family: 'MedievalSharp', cursive;
 }
 
 /* Header */
@@ -71,6 +74,8 @@ header {
     color: #d3af37;
     font-size: 1.6rem;
     font-weight: bold;
+    letter-spacing: 1px;
+    font-family: 'MedievalSharp', cursive;
 }
 
 .sub-title {
