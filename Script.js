@@ -6,6 +6,9 @@ function showCategory(categoryId) {
     });
 
     document.getElementById(categoryId).style.display = "block";
+    document.getElementById(categoryId).scrollIntoView({
+    behavior: "smooth"
+});
 }
 
 window.onload = function() {
