@@ -325,3 +325,7 @@ footer {
 .product button:hover {
   transform: scale(1.05);
 }
+.category-section {
+  display: none;
+  margin-top: 2rem;
+}
