@@ -7,7 +7,25 @@
     <title>Shop - Mage's Mana</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+<script>
+function showCategory(categoryId) {
+    const sections = document.querySelectorAll(".category-section");
 
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
+
+    document.getElementById(categoryId).style.display = "block";
+
+    document.getElementById(categoryId).scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+window.onload = function() {
+    showCategory('tabletop');
+};
+</script>
 <body>
 
 <header>
@@ -175,6 +193,5 @@
             <p>Open a Ticket by Contacting us at Support@MMHG.com</p>
         </div>
     </footer>
-<script src="script.js"></script>
 </body>
 </html>
