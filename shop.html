@@ -96,10 +96,14 @@ window.onclick = function(event) {
         </div>
 
         <div class="product">
-            <img src="" alt="placeholder">
+            <img src="" alt="placeholder" onclick="openImage(this)">
+            <div class="product-info" onclick="openProduct(
+            'Resident Evil (directors cut)',
+            '$19.99',
+            'A copy of the original 1997 Resident Evil.' )">
             <h4>placeholder</h4>
-            <p>$xx.xx</p>
-            <button class="add-to-cart">Add to Cart</button>
+            <p>$19.99</p>
+            <button class="add-to-cart" onclick="event.stopPropagation()">Add to Cart</button>
         </div>
 
         <div class="product">
