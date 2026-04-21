@@ -284,11 +284,11 @@ footer {
 }
 
 .product-row {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
   justify-content: center;
-  flex-direction: column;
   gap: 2rem;
-  flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .product {
