@@ -46,6 +46,15 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 };
+function openProduct(name, price, desc) {
+    const modal = document.getElementById("productModal");
+
+    document.getElementById("modalTitle").textContent = name;
+    document.getElementById("modalPrice").textContent = price;
+    document.getElementById("modalDesc").textContent = desc;
+
+    modal.style.display = "block";
+}
 </script>
 
 <body>
@@ -226,6 +235,15 @@ window.onclick = function(event) {
 <div id="imageModal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modalImg">
+</div>
+<div id="productModal" class="modal">
+    <div class="modal-box">
+        <span class="close" onclick="document.getElementById('productModal').style.display='none'">&times;</span>
+
+        <h3 id="modalTitle"></h3>
+        <p id="modalPrice"></p>
+        <p id="modalDesc"></p>
+    </div>
 </div>
 </body>
 </html>
