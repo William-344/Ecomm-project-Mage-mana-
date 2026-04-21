@@ -365,6 +365,9 @@ footer {
 .product img {
   cursor: pointer;
   transition: transform 0.2s;
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
 }
 
 .product img:hover {
