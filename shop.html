@@ -26,6 +26,26 @@ function showCategory(categoryId) {
 window.onload = function() {
     showCategory('tabletop');
 };
+function openImage(img) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+
+    modal.style.display = "block";
+    modalImg.src = img.src;
+}
+
+// Close when clicking X
+document.querySelector(".close").onclick = function() {
+    document.getElementById("imageModal").style.display = "none";
+};
+
+// Close when clicking outside image
+window.onclick = function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
 </script>
 
 <body>
