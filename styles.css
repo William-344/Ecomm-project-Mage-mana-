@@ -255,13 +255,6 @@ footer {
   font-family: 'MedievalSharp', cursive;
   margin-top: 2rem;
 }
-/* Shop page (main) */
-.shop-title {
-  text-align: center;
-  color: #d3af37;
-  font-family: 'MedievalSharp', cursive;
-  margin-top: 2rem;
-}
 
 .shop-categories {
   display: flex;
