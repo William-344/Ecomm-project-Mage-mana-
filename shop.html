@@ -65,7 +65,7 @@ window.onload = function() {
     <div class="product-row">
 
         <div class="product">
-            <img src="images/miniatures button (main page).jpg" alt="Mini 1">
+            <img src="images/miniatures button (main page).jpg" alt="Mini 1" onclick="openImage(this)">
             <h4>Tech Priest pack (Unpainted)</h4>
             <p>$13.99</p>
             <button class="add-to-cart">Add to Cart</button>
@@ -195,5 +195,9 @@ window.onload = function() {
             <p>Open a Ticket by Contacting us at Support@MMHG.com</p>
         </div>
     </footer>
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+</div>
 </body>
 </html>
