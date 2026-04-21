@@ -360,3 +360,11 @@ footer {
   font-size: 40px;
   cursor: pointer;
 }
+.product img {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product img:hover {
+  transform: scale(1.05);
+}
