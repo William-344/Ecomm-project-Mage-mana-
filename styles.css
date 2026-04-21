@@ -306,7 +306,7 @@ footer {
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-self: center;
 }
 
 .product img {
