@@ -86,9 +86,13 @@ window.onclick = function(event) {
 
         <div class="product">
             <img src="images/miniatures button (main page).jpg" alt="Mini 1" onclick="openImage(this)">
+            <div class="product-info" onclick="openProduct(
+        'Tech Priest Pack (Unpainted)',
+        '$13.99',
+        'A detailed unpainted Tech Priest miniature set. This set comes with 1 Tech Preist and 2 Castellax Battle-Automata' )">
             <h4>Tech Priest pack (Unpainted)</h4>
             <p>$13.99</p>
-            <button class="add-to-cart">Add to Cart</button>
+            <button class="add-to-cart" onclick="event.stopPropagation()">Add to Cart</button>
         </div>
 
         <div class="product">
