@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart - Mage's Mana</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Your Cart</h1>
+</header>
+
+<main style="text-align:center; margin-top: 2rem;">
+
+    <div id="cartItems"></div>
+
+    <h2 id="total"></h2>
+
+    <button onclick="clearCart()">Clear Cart</button>
+
+</main>
+
+<script>
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function displayCart() {
+    const container = document.getElementById("cartItems");
+    const totalEl = document.getElementById("total");
+
+    container.innerHTML = "";
+
+    let total = 0;
+
+    if (cart.length === 0) {
+        container.innerHTML = "<p>Your cart is empty.</p>";
+        totalEl.textContent = "";
+        return;
+    }
+
+    cart.forEach((item, index) => {
+        total += item.price;
+
+        container.innerHTML += `
+            <div style="margin: 1rem;">
+                <p><strong>${item.name}</strong></p>
+                <p>$${item.price}</p>
+                <button onclick="removeItem(${index})">Remove</button>
+            </div>
+        `;
+    });
+
+    totalEl.textContent = "Total: $" + total.toFixed(2);
+}
+
+function removeItem(index) {
+    cart.splice(index, 1);
+    localStorage.setItem("cart", JSON.stringify(cart));
+    displayCart();
+}
+
+function clearCart() {
+    localStorage.removeItem("cart");
+    cart = [];
+    displayCart();
+}
+
+displayCart();
+</script>
+
+</body>
+</html>
