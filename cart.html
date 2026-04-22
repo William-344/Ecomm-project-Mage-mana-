@@ -5,7 +5,6 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap" rel="stylesheet">
     <title>Your Cart - Mage's Mana</title>
     <link rel="stylesheet" href="styles.css">
-    <a href="cart.html">Cart (0)</a>
 </head>
 
 <body>
@@ -23,7 +22,7 @@
             <a href="shop.html">Shop</a>
             <a href="events.html">Events</a>
             <a href="about.html">About</a>
-            <a href="cart.html">Cart (0)</a>
+            <a href="cart.html" id="cart-link">Cart (0)</a>
         </div>
     </div>
 </header>
@@ -38,60 +37,6 @@
 
 </main>
 
-<script>
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-function displayCart() {
-    const container = document.getElementById("cartItems");
-    const totalEl = document.getElementById("total");
-
-    container.innerHTML = "";
-
-    let total = 0;
-
-    if (cart.length === 0) {
-        container.innerHTML = "<p>Your cart is empty.</p>";
-        totalEl.textContent = "";
-        return;
-    }
-
-    cart.forEach((item, index) => {
-        total += item.price;
-
-        container.innerHTML += `
-            <div style="margin: 1rem;">
-                <p><strong>${item.name}</strong></p>
-                <p>$${item.price}</p>
-                <button onclick="removeItem(${index})">Remove</button>
-            </div>
-        `;
-    });
-
-    totalEl.textContent = "Total: $" + total.toFixed(2);
-}
-
-function removeItem(index) {
-    cart.splice(index, 1);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    displayCart();
-}
-
-function clearCart() {
-    localStorage.removeItem("cart");
-    cart = [];
-    displayCart();
-}
-function updateCartCount() {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
-
-    if (!cartLink) return; // ✅ prevents crash
-
-    cartLink.textContent = `Cart (${cart.length})`;
-}
-displayCart();
-updateCartCount();
-</script>
 
 <footer>
     <div class="footer-section">

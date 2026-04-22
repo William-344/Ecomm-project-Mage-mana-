@@ -6,7 +6,6 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap" rel="stylesheet">
     <title>Shop - Mage's Mana</title>
     <link rel="stylesheet" href="styles.css">
-    <a href="cart.html">Cart (0)</a>
 </head>
 
 <script>
@@ -64,16 +63,6 @@ function openProduct(name, price, desc) {
 
     modal.style.display = "block";
 }
-function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
-    
-    if (cartLink) {
-        cartLink.textContent = `Cart (${cart.length})`;
-    }
-}
-
-updateCartCount();
 </script>
 
 <body>
@@ -91,7 +80,7 @@ updateCartCount();
             <a href="shop.html">Shop</a>
             <a href="events.html">Events</a>
             <a href="about.html">About</a>
-            <a href="cart.html">Cart (0)</a>
+            <a href="cart.html" id="cart-link">Cart (0)</a>
         </div>
     </div>
 </header>
