@@ -38,6 +38,7 @@ function openImage(img) {
 // Close when clicking close button
 window.onload = function() {
     showCategory('tabletop');
+    updateCartCount();
 
     document.querySelectorAll(".close").forEach(btn => {
         btn.onclick = function() {
