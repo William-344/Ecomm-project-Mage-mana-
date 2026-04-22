@@ -6,20 +6,8 @@
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap" rel="stylesheet">
     <title>Mage's Mana Hobby & Games</title>
     <link rel="stylesheet" href="styles.css">
-    <a href="cart.html">Cart (0)</a>
 </head>
-<script>
-function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
-    
-    if (cartLink) {
-        cartLink.textContent = `Cart (${cart.length})`;
-    }
-}
 
-updateCartCount();
-</script>
 <body>
     <!-- Header / Top Banner -->
     <header>
@@ -95,5 +83,6 @@ updateCartCount();
             <p>Open a Ticket by Contacting us at Support@MMHG.com</p>
         </div>
     </footer>
+<script src="cart.js"></script>
 </body>
 </html>
