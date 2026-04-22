@@ -1,6 +1,6 @@
 function updateCartCount() {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
+    const cartLink = document.getElementById("cart-link");
 
     if (cartLink) {
         cartLink.textContent = `Cart (${cart.length})`;
