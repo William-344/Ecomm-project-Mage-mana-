@@ -8,18 +8,7 @@
     <title>Mage's Mana Hobby & Games</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<script>
-function updateCartCount() {
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
-    
-    if (cartLink) {
-        cartLink.textContent = `Cart (${cart.length})`;
-    }
-}
 
-updateCartCount();
-</script>
 <body>
 
     <header>
