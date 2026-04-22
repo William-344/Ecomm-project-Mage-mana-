@@ -35,8 +35,15 @@ function openImage(img) {
 }
 
 // Close when clicking close button
-document.querySelector(".close").onclick = function() {
-    document.getElementById("imageModal").style.display = "none";
+window.onload = function() {
+    showCategory('tabletop');
+
+    document.querySelectorAll(".close").forEach(btn => {
+        btn.onclick = function() {
+            document.getElementById("imageModal").style.display = "none";
+            document.getElementById("productModal").style.display = "none";
+        };
+    });
 };
 
 // Close when clicking outside the image
