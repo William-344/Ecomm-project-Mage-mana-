@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Roboto&display=swap" rel="stylesheet">
     <title>Your Cart - Mage's Mana</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -9,7 +10,21 @@
 <body>
 
 <header>
-    <h1>Your Cart</h1>
+        <div class="logo">
+            <img src="images/Jimtheball.png" alt="Mage's Mana Hobby & Games logo">
+            <div class="logo-text">
+                <span class="main-title">Mage's Mana</span>
+                <span class="sub-title">Hobby & Games</span>
+        </div>
+
+        <div class="nav-buttons">
+            <a href="Index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="events.html">Events</a>
+            <a href="about.html">About</a>
+            <a href="cart.html">Cart (0)</a>
+        </div>
+    </div>
 </header>
 
 <main style="text-align:center; margin-top: 2rem;">
@@ -69,5 +84,22 @@ function clearCart() {
 displayCart();
 </script>
 
+<footer>
+    <div class="footer-section">
+        <h4>Visit Our Store!</h4>
+        <p>123 Fantasy Lane, Imaginaria</p>
+    </div>
+    <div class="footer-section">
+        <h4>Opening Hours</h4>
+        <div class="hours">
+            <div>MON - FRI: 12pm - 9pm</div>
+            <div>SAT - SUN: 11am - 8pm</div>
+        </div>
+    </div>
+    <div class="footer-section">
+        <h4>Need Help?</h4>
+        <p>Open a Ticket by Contacting us at Support@MMHG.com</p>
+    </div>
+</footer>
 </body>
 </html>
