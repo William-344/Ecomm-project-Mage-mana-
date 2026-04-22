@@ -62,6 +62,16 @@ function openProduct(name, price, desc) {
 
     modal.style.display = "block";
 }
+function updateCartCount() {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
+    
+    if (cartLink) {
+        cartLink.textContent = `Cart (${cart.length})`;
+    }
+}
+
+updateCartCount();
 </script>
 
 <body>

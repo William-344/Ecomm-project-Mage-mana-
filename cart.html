@@ -80,8 +80,12 @@ function clearCart() {
     cart = [];
     displayCart();
 }
-
+function updateCartCount() {
+    const cartLink = document.querySelector(".nav-buttons a[href='cart.html']");
+    cartLink.textContent = `Cart (${cart.length})`;
+}
 displayCart();
+updateCartCount();
 </script>
 
 <footer>
