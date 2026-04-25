@@ -1,48 +1,20 @@
+function updateCartCount() {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartLink = document.getElementById("cart-link");
 
-function displayCart() {
-    const container = document.getElementById("cartItems");
-    const totalEl = document.getElementById("total");
-
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    container.innerHTML = "";
-
-    let total = 0;
-
-    if (cart.length === 0) {
-        container.innerHTML = "<p>Your cart is empty.</p>";
-        totalEl.textContent = "";
-        return;
+    if (cartLink) {
+        cartLink.textContent = `Cart (${cart.length})`;
     }
-
-    cart.forEach((item, index) => {
-        total += item.price;
-
-        container.innerHTML += `
-            <div>
-                <p><strong>${item.name}</strong></p>
-                <p>$${item.price}</p>
-                <button onclick="removeItem(${index})">Remove</button>
-            </div>
-        `;
-    });
-
-    totalEl.textContent = "Total: $" + total.toFixed(2);
 }
 
-function removeItem(index) {
+function addToCart(name, price) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    cart.splice(index, 1);
+    cart.push({ name, price });
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    displayCart();
+    updateCartCount();
 }
 
-function clearCart() {
-    localStorage.removeItem("cart");
-    displayCart();
-}
-
-document.addEventListener("DOMContentLoaded", displayCart);
+document.addEventListener("DOMContentLoaded", updateCartCount);
