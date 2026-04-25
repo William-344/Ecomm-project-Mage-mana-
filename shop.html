@@ -49,10 +49,6 @@ function openImage(img) {
 window.addEventListener("DOMContentLoaded", () => {
     showCategory('tabletop');
 
-    if (typeof updateCartCount === "function") {
-        updateCartCount();
-    }
-
     document.querySelectorAll(".close").forEach(btn => {
         btn.onclick = function () {
             document.getElementById("imageModal").style.display = "none";
@@ -276,5 +272,11 @@ function openProduct(name, price, desc) {
     </div>
 </div>
 <script src="cart.js"></script>
+<script>
+    window.addEventListener("DOMContentLoaded", () => {
+        showCategory('tabletop');
+        updateCartCount();
+    });
+</script>
 </body>
 </html>
