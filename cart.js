@@ -1,3 +1,4 @@
+
 function displayCart() {
     const container = document.getElementById("cartItems");
     const totalEl = document.getElementById("total");
