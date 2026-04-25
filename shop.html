@@ -99,8 +99,10 @@ function openProduct(name, price, desc) {
 
     <div class="product">
         <img src="images/miniatures button (main page).jpg" onclick="openImage(this)">
-        <div class="product-info" onclick="openProduct('Tech Priest Pack (Unpainted)', '$13.99', 'A detailed unpainted Tech Priest miniature set. This comes with A tech priest and 2 Castellax Battle-Automata.')">
-            <h4>Tech Priest pack (Unpainted)</h4>
+        <div class="product-info" >
+            <h4 onclick="openProduct('Tech Priest Pack (Unpainted)', '$13.99', 'A detailed unpainted Tech Priest miniature set. This comes with A tech priest and 2 Castellax Battle-Automata.')" >
+                Tech Priest pack (Unpainted)
+            </h4>
             <p>$13.99</p>
             <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Tech Priest Pack (Unpainted)', 13.99)"> Add to Cart </button>
         </div>
