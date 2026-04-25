@@ -110,12 +110,12 @@ function openProduct(name, price, desc) {
 
     <div class="product">
         <img src="images/RG (main page).jpg" onclick="openImage(this)">
-        <div class="product-info">
+        <div class="product-info" >
             <h4 onclick="openProduct('Resident Evil (Directors Cut)', '$19.99', 'Original 1997 Resident Evil.')"></h4>
                 Resident Evil (Directors Cut)
             </h4>
             <p>$19.99</p>
-            <button class="add-to-cart" onclick="event.stopPropagation()">Add to Cart</button>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Resident Evil (Directors Cut)', 19.99)"> Add to Cart </button>
         </div>
     </div>
 
