@@ -23,9 +23,20 @@ function showCategory(categoryId) {
     });
 }
 
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", () => {
     showCategory('tabletop');
-};
+
+    if (typeof updateCartCount === "function") {
+        updateCartCount();
+    }
+
+    document.querySelectorAll(".close").forEach(btn => {
+        btn.onclick = function () {
+            document.getElementById("imageModal").style.display = "none";
+            document.getElementById("productModal").style.display = "none";
+        };
+    });
+});
 function openImage(img) {
     const modal = document.getElementById("imageModal");
     const modalImg = document.getElementById("modalImg");
@@ -35,9 +46,20 @@ function openImage(img) {
 }
 
 // Close when clicking close button
-window.onload = function() {
+window.addEventListener("DOMContentLoaded", () => {
     showCategory('tabletop');
-    updateCartCount();
+
+    if (typeof updateCartCount === "function") {
+        updateCartCount();
+    }
+
+    document.querySelectorAll(".close").forEach(btn => {
+        btn.onclick = function () {
+            document.getElementById("imageModal").style.display = "none";
+            document.getElementById("productModal").style.display = "none";
+        };
+    });
+});
 
     document.querySelectorAll(".close").forEach(btn => {
         btn.onclick = function() {
