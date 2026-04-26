@@ -28,9 +28,60 @@
 
 <body>
    <main class="checkout-page">
-    <h1>Checkout</h1>
-    <div id="summary"></div>
-    <button onclick="placeOrder()" class="checkout-btn">Place Order</button>
+
+    <div class="checkout-container">
+
+        <!-- LEFT: Shipping -->
+        <div class="checkout-left">
+            <h2>Shipping Information</h2>
+
+            <input type="text" placeholder="Full Name">
+            <input type="email" placeholder="Email">
+            <input type="text" placeholder="Phone Number">
+
+            <input type="text" placeholder="Street Address 1">
+            <input type="text" placeholder="Street Address 2 (Optional)">
+
+            <div class="row">
+                <input type="text" placeholder="City">
+
+                <select>
+                    <option>State</option>
+                    <option>FL</option>
+                    <option>CA</option>
+                    <option>NY</option>
+                </select>
+
+                <input type="text" placeholder="ZIP">
+            </div>
+        </div>
+
+        <!-- RIGHT: Payment -->
+        <div class="checkout-right">
+            <h2>Payment</h2>
+
+            <select>
+                <option>Payment Method</option>
+                <option>Credit Card</option>
+                <option>Debit Card</option>
+            </select>
+
+            <input type="text" placeholder="Card Number">
+
+            <div class="row">
+                <input type="text" placeholder="MM/YY">
+                <input type="text" placeholder="CVV">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary">
+        <h2>Order Summary</h2>
+        <div id="summary"></div>
+        <button class="checkout-btn" onclick="placeOrder()">Place Order</button>
+    </div>
 </main>
 
 <script src="cart.js"></script>

@@ -553,3 +553,65 @@ footer {
 .checkout-btn:hover {
     background-color: #e6c200;
 }
+/* Checkout Layout */
+.checkout-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+/* Left & Right panels */
+.checkout-left,
+.checkout-right {
+    flex: 1;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+}
+
+/* Inputs */
+.checkout-left input,
+.checkout-right input,
+.checkout-left select,
+.checkout-right select {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+/* Row layout (city/state/zip + exp/cvv) */
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.row input,
+.row select {
+    flex: 1;
+}
+
+/* Order summary */
+.order-summary {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+/* Button */
+.checkout-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
