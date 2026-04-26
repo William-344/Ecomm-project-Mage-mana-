@@ -8,7 +8,9 @@
     <title>Mage's Mana Hobby & Games</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-<header>
+
+<body>
+    <header>
         <div class="logo">
             <img src="images/Jimtheball.png" alt="Mage's Mana Hobby & Games logo">
             <div class="logo-text">
@@ -25,8 +27,6 @@
         </div>
     </div>
 </header>
-
-<body>
    <main class="checkout-page">
 
     <div class="checkout-container">
@@ -84,7 +84,6 @@
     </div>
 </main>
 
-<script src="cart.js"></script>
 <script>
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let summary = document.getElementById("summary");
