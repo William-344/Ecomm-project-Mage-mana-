@@ -85,6 +85,8 @@
 </main>
 
 <script>
+document.addEventListener("DOMContentLoaded", () => {
+
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let summary = document.getElementById("summary");
 
@@ -99,7 +101,9 @@
         `;
     });
 
-    summary.innerHTML += `<h2>Total: $${total.toFixed(2)}</h2>`;  
+    summary.innerHTML += `<h2>Total: $${total.toFixed(2)}</h2>`;
+
+});
 </script>
 
 <footer>
