@@ -93,7 +93,7 @@ function goToCheckout() {
     window.location.href = "checkout.html";
 }
 function placeOrder() {
-    alert("Order placed successfully!");
+    alert("Thank you for your order! Your items will be shipped soon.");
     localStorage.removeItem("cart");
     window.location.href = "Index.html";
 }
