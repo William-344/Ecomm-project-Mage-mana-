@@ -29,30 +29,32 @@
 </header>
    <main class="checkout-page">
 
+    <form onsubmit="placeOrder(); return false;">
+
     <div class="checkout-container">
 
         <!-- LEFT: Shipping -->
         <div class="checkout-left">
             <h2>Shipping Information</h2>
 
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email">
-            <input type="text" placeholder="Phone Number">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email" required>
+            <input type="text" placeholder="Phone Number" required>
 
-            <input type="text" placeholder="Street Address 1">
+            <input type="text" placeholder="Street Address 1" required>
             <input type="text" placeholder="Street Address 2 (Optional)">
 
             <div class="row">
-                <input type="text" placeholder="City">
+                <input type="text" placeholder="City" required>
 
-                <select>
-                    <option>State</option>
+                <select required>
+                    <option value="" disabled selected>State</option>
                     <option>FL</option>
                     <option>CA</option>
                     <option>NY</option>
                 </select>
 
-                <input type="text" placeholder="ZIP">
+                <input type="text" placeholder="ZIP" required>
             </div>
         </div>
 
@@ -60,17 +62,17 @@
         <div class="checkout-right">
             <h2>Payment</h2>
 
-            <select>
-                <option>Payment Method</option>
+            <select required>
+                <option value="" disabled selected>Payment Method</option>
                 <option>Credit Card</option>
                 <option>Debit Card</option>
             </select>
 
-            <input type="text" placeholder="Card Number">
+            <input type="text" placeholder="Card Number" required>
 
             <div class="row">
-                <input type="text" placeholder="MM/YY">
-                <input type="text" placeholder="CVV">
+                <input type="text" placeholder="MM/YY" required>
+                <input type="text" placeholder="CVV" required>
             </div>
         </div>
 
@@ -80,8 +82,9 @@
     <div class="order-summary">
         <h2>Order Summary</h2>
         <div id="summary"></div>
-        <button class="checkout-btn" onclick="placeOrder()">Place Order</button>
+        <button type="submit" class="checkout-btn">Place Order</button>
     </div>
+    </form>
 </main>
 
 <script>
