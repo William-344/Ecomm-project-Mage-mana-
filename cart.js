@@ -92,3 +92,8 @@ function changeQty(index, amount) {
 function goToCheckout() {
     window.location.href = "checkout.html";
 }
+function placeOrder() {
+    alert("Order placed successfully!");
+    localStorage.removeItem("cart");
+    window.location.href = "Index.html";
+}
