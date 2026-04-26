@@ -514,3 +514,29 @@ footer {
 .product-info:hover h4 {
   color: #d3af37;
 }
+/* Checkout Page */
+.checkout-page {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.checkout-page h1 {
+    margin-bottom: 20px;
+    font-family: 'MedievalSharp', cursive;
+}
+
+#summary p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+#summary h2 {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: gold;
+}
