@@ -389,6 +389,7 @@ footer {
   color: #d3af37;
 }
 
+
 .shop-categories {
   display: flex;
   justify-content: center;
@@ -507,8 +508,9 @@ footer {
 .product img:hover {
   transform: scale(1.05);
 }
-.product-info {
+.product-info h4 {
   cursor: pointer;
+  text-decoration: underline;
 }
 
 .product-info:hover h4 {
