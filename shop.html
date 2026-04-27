@@ -208,14 +208,15 @@ function openProduct(name, price, desc) {
 
 <div id="miniatures" class="category-section">
     <h3 class="section-title">Miniatures</h3>
-    <div class="product-row">
-        <div class="product">
-            <img src="" alt="miniature">
-            <h4>Mini 1</h4>
-            <p>$x.xx</p>
-            <button>Add to Cart</button>
+    <div class="product">
+        <img src="images/Shop/mini1.jpg" onclick="openImage(this)">
+        <div class="product-info" >
+            <h4 onclick="openProduct('Tyranid Tyrannofex', '$9.99', 'Prepainted miniature Tyranid Tyrannofex.')" >
+                Tyranid Tyrannofex
+            </h4>
+            <p>$9.99</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Tyranid Tyrannofex', 9.99)"> Add to Cart </button>
         </div>
-    </div>
 </div>
 
 <div id="retro" class="category-section">
