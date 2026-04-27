@@ -159,7 +159,7 @@ function openProduct(name, price, desc) {
     </div>
 
     <div class="product">
-        <img src="images/RG (main page).jpg" onclick="openImage(this)">
+        <img src="images/RG (main page).jpg" alt="A copy of the classic Resident Evil" onclick="openImage(this)">
         <div class="product-info" >
             <h4 onclick="openProduct('Resident Evil (Directors Cut)', '$19.99', 'Original 1997 Resident Evil.')"></h4>
                 Resident Evil (Directors Cut)
@@ -170,7 +170,7 @@ function openProduct(name, price, desc) {
     </div>
 
     <div class="product">
-        <img src="images/Shop/Tavern_set.jpg" onclick="openImage(this)">
+        <img src="images/Shop/Tavern_set.jpg" alt="Small Tavern Set" onclick="openImage(this)">
         <div class="product-info" >
             <h4 onclick="openProduct('Tavern Set', '$18.99', 'Miniatures not included.')"></h4>
                 Tavern Set
@@ -181,7 +181,7 @@ function openProduct(name, price, desc) {
     </div>
 
     <div class="product">
-        <img src="images/Shop/mini1.jpg" onclick="openImage(this)">
+        <img src="images/Shop/mini1.jpg" alt="Tyranid Tyrannofex" onclick="openImage(this)">
         <div class="product-info" >
             <h4 onclick="openProduct('Tyranid Tyrannofex', '$9.99', 'Prepainted miniature Tyranid Tyrannofex.')" >
                 Tyranid Tyrannofex
@@ -199,9 +199,11 @@ function openProduct(name, price, desc) {
     <div class="product-row">
         <div class="product">
             <img src="images/TT (main page).jpg" alt="star wars tabletop" onclick="openImage(this)">
-            <h4>star wars tabletop</h4>
+            <h4 onclick="openProduct('Star Wars Tabletop', '$29.99', 'A bundled, pre built set for a Star Wars tabletop game. Comes with unpainted figures, a battleground, instructions, and fun.')" >
+                Star Wars Tabletop game
+            </h4>
             <p>$29.99</p>
-            <button class="add-to-cart" onclick="event.stopPropagation()">Add to Cart</button>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Star Wars Tabletop', 29.99)"> Add to Cart </button>
         </div>
     </div>
 </div>
