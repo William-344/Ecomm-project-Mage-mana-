@@ -223,15 +223,16 @@ function openProduct(name, price, desc) {
 
 <div id="retro" class="category-section">
     <h3 class="section-title">Retro Games</h3>
-    <div class="product-row">
-        <div class="product">
-            <img src="" alt="retro">
-            <h4>Retro 1</h4>
-            <p>$xx.xx</p>
-            <button>Add to Cart</button>
+    <div class="product">
+        <img src="images/RG (main page).jpg" alt="A copy of the classic Resident Evil" onclick="openImage(this)">
+        <div class="product-info" >
+            <h4 onclick="openProduct('Resident Evil (Directors Cut)', '$19.99', 'Original 1997 Resident Evil.')"></h4>
+                Resident Evil (Directors Cut)
+            </h4>
+            <p>$19.99</p>
+            <button class="add-to-cart" onclick="event.stopPropagation(); addToCart('Resident Evil (Directors Cut)', 19.99)"> Add to Cart </button>
         </div>
     </div>
-</div>
 
 <div id="collectibles" class="category-section">
     <h3 class="section-title">Collectibles</h3>
